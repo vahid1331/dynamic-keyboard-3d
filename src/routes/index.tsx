@@ -60,7 +60,7 @@ const ROWS: Array<Array<[string, number?]>> = [
 function Index() {
   const [current, setCurrent] = useState(0);
   const [swap, setSwap] = useState(false);
-  const [shown, setShown] = useState(PROJECTS[0]);
+  const [shown, setShown] = useState<Project>(PROJECTS[0]!);
   const [toast, setToast] = useState<string | null>(null);
   const [intro, setIntro] = useState(true);
 
@@ -104,7 +104,7 @@ function Index() {
   const select = (i: number, silent = false) => {
     setCurrent((c) => {
       if (c === i) return c;
-      const p = PROJECTS[i];
+      const p = PROJECTS[i]!;
       document.body.dataset["theme"] = p.theme;
       setSwap(true);
       if (swapTimer.current) clearTimeout(swapTimer.current);
@@ -124,7 +124,7 @@ function Index() {
 
   /* ---- boot / theme ---- */
   useEffect(() => {
-    document.body.dataset["theme"] = PROJECTS[0].theme;
+    document.body.dataset["theme"] = PROJECTS[0]!.theme;
     const t = setTimeout(() => setIntro(false), 1400);
     return () => clearTimeout(t);
   }, []);
