@@ -381,7 +381,7 @@ function Index() {
                         const projMatch = /^P([1-5])$/.exec(label);
                         const isProj = !!projMatch;
                         const pIdx = projMatch ? Number(projMatch[1]) - 1 : -1;
-                        const p = isProj ? PROJECTS[pIdx] : null;
+                        const p = isProj ? PROJECTS[pIdx]! : null;
                         return (
                           <button
                             type="button"
