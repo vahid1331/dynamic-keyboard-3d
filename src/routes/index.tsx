@@ -176,7 +176,7 @@ function Index() {
       if (kbTilt.current) {
         kbTilt.current.style.transform = mobile
           ? `rotateX(${52 + ty * 3}deg) rotateZ(-20deg)`
-          : `rotateX(${50 + ty * 7}deg) rotateZ(${-24 + tx * 9}deg) rotateY(${tx * 2.5}deg) translate3d(${tx * -14}px, ${ty * -8}px, 0)`;
+          : `scale(.9) rotateX(${50 + ty * 7}deg) rotateZ(${-24 + tx * 9}deg) rotateY(${tx * 2.5}deg) translate3d(${tx * -14}px, ${ty * -8}px, 0)`;
       }
       if (!mobile && previewRef.current) {
         previewRef.current.style.transform = `perspective(1100px) rotateX(${7 - ty * 3}deg) rotateY(${17 - tx * 5}deg) rotateZ(-1.5deg) translateX(${tx * -12}px)`;
