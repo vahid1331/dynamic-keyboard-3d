@@ -231,7 +231,13 @@ header{ text-align:center; padding-top:12px; user-select:none; }
     0 0 calc(22px + 40px * var(--near)) var(--pc); }
 .key.proj::before{ background:linear-gradient(180deg, color-mix(in srgb, var(--pc) 45%, #0a0e1a), #05070f); }
 .key.proj .pic{ font-size:19px; filter:drop-shadow(0 3px 5px rgba(0,0,0,.6)); }
-.key.proj.pressed{ transform:translateZ(9px); }
+.key.proj.pressed{ transform:translateZ(8px); }
+.key.proj.pressed .cap{ animation:pressFlashPc .42s ease-out; }
+@keyframes pressFlashPc{
+  0%{ box-shadow:inset 0 0 0 rgba(255,255,255,0), 0 0 0 0 var(--pc); }
+  25%{ box-shadow:inset 0 0 24px rgba(255,255,255,.6), 0 0 80px var(--pc); }
+  100%{ box-shadow:inset 0 1px 0 rgba(255,255,255,.45), inset 0 -7px 12px rgba(0,0,0,.4), 0 0 60px var(--pc); }
+}
 .key.proj.active .cap{ outline:2.5px solid color-mix(in srgb, var(--pc) 75%, #fff); outline-offset:2px; }
 .key.proj.active{ animation:huewave 9s linear infinite, projfloat 2.2s ease-in-out infinite; }
 @keyframes projfloat{
