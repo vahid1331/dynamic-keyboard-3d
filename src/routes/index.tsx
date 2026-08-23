@@ -97,8 +97,10 @@ function Index() {
 
   const press = (el: HTMLElement | null | undefined) => {
     if (!el) return;
+    el.classList.remove("pressed");
+    void el.offsetWidth;
     el.classList.add("pressed");
-    setTimeout(() => el.classList.remove("pressed"), 150);
+    setTimeout(() => el.classList.remove("pressed"), 420);
   };
 
   const select = (i: number, silent = false) => {
