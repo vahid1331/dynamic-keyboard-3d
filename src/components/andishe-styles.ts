@@ -204,9 +204,16 @@ header{ text-align:center; padding-top:12px; user-select:none; }
   background:#02040a; filter:blur(3px); opacity:calc(.65 + .25 * var(--near)); }
 
 .key:hover .cap, .key:focus-visible .cap{ color:#fff; }
-.key.pressed{ transform:translateZ(6px); transition-duration:.06s; }
-.key.pressed .cap{ box-shadow:inset 0 1px 0 rgba(255,255,255,.12), inset 0 -2px 5px rgba(0,0,0,.7),
-  0 0 46px hsl(var(--h) 95% 62% / .85); }
+.key.pressed{ transform:translateZ(5px); transition-duration:.05s; }
+.key.pressed .cap{ color:#fff;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2), inset 0 -3px 6px rgba(0,0,0,.7),
+    0 0 64px hsl(var(--h) 95% 65% / .98), 0 0 130px hsl(var(--h) 95% 60% / .45);
+  animation:pressFlash .42s ease-out; }
+@keyframes pressFlash{
+  0%{ box-shadow:inset 0 0 0 rgba(255,255,255,0), 0 0 0 0 hsl(var(--h) 95% 70% / 1); }
+  25%{ box-shadow:inset 0 0 24px rgba(255,255,255,.65), 0 0 80px hsl(var(--h) 95% 66% / 1); }
+  100%{ box-shadow:inset 0 1px 0 rgba(255,255,255,.2), inset 0 -3px 6px rgba(0,0,0,.7), 0 0 64px hsl(var(--h) 95% 65% / .98); }
+}
 .key .space-label{ font:700 10px 'Space Grotesk'; letter-spacing:.35em; color:#8695ba; }
 
 /* project keys */
