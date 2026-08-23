@@ -54,8 +54,8 @@ header{ text-align:center; padding-top:12px; user-select:none; }
 @keyframes logofloat{ 0%,100%{ transform:translateY(0) rotate(-2deg);} 50%{ transform:translateY(-9px) rotate(2deg);} }
 @keyframes pulse{ 0%,100%{ opacity:.55; transform:scale(1);} 50%{ opacity:1; transform:scale(1.18);} }
 
-.brand-en{ direction:ltr; font-family:'Orbitron','Space Grotesk',sans-serif; line-height:1.05; }
-.be-1{ display:block; font-weight:900; font-size:34px; letter-spacing:.42em; margin-right:-.42em; color:#fff;
+.brand-en{ direction:ltr; font-family:'Audiowide','Space Grotesk',sans-serif; line-height:1.05; }
+.be-1{ display:block; font-weight:400; font-size:33px; letter-spacing:.26em; margin-right:-.26em; color:#fff;
   text-shadow:0 1px 0 #b9c4dd, 0 2px 0 #93a1c2, 0 3px 0 #6f7da0, 0 4px 0 #4d5a7c,
               0 5px 2px rgba(0,0,0,.5), 0 10px 24px rgba(0,0,0,.65); }
 .be-2{ display:block; margin-top:8px; font-weight:700; font-size:19px; letter-spacing:.58em; margin-right:-.58em;
