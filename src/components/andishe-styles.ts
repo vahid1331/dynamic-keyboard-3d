@@ -291,7 +291,7 @@ header{ text-align:center; padding-top:12px; user-select:none; }
   transition:opacity .7s, visibility .7s; }
 #intro.done{ opacity:0; visibility:hidden; }
 #intro img{ width:110px; animation:logofloat 1.6s ease-in-out infinite; }
-#intro .t{ font-family:'Orbitron'; font-weight:900; font-size:22px; letter-spacing:.5em; margin-right:-.5em;
+#intro .t{ font-family:'Audiowide'; font-weight:400; font-size:22px; letter-spacing:.3em; margin-right:-.3em;
   color:#fff; text-shadow:0 0 30px rgba(var(--c2a),.8); direction:ltr; }
 #intro .bar{ width:220px; height:3px; border-radius:99px; background:#141a2b; overflow:hidden; }
 #intro .bar i{ display:block; height:100%; width:40%; border-radius:99px;
